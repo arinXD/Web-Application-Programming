@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+            padding: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0 30px 30px;
+        }
+
+        input {
+            margin: 20px 0;
+        }
+
+        legend {
+            margin: 0 10px;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        article {
+            padding: 20px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>ข้อมูลนักศึกษา</h1>
+    <div>
+        <form method="post" action='add_student.php'>
+            <fieldset>
+                <legend>ฟอร์มเพิ่มข้อมูลนักศึกษา</legend>
+                <article>
+
+                    รหัสนึกศึกษา:
+                    <input type="text" name="stdID" value="" required> <br>
+                    คำนำหน้า:
+                    <select name="stdPrefix" required>
+                        <option value="นาย"> นาย
+                        <option value="นางสาว"> นางสาว
+                        <option value="นาง"> นาง
+                    </select> <br>
+                    ชื่อ:
+                    <input type="text" name="stdFname" value="" required>
+                    นามสกุล:
+                    <input type="text" name="stdLname" value="" required> <br>
+                    วันเกิด:
+                    <input type="date" name="stdBday" value="" required> <br> <br>
+
+                    <button type="submit">บันทึกข้อมูลนึกศึกษา</button>
+                </article>
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>

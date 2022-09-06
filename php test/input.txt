@@ -1,0 +1,2 @@
+Hello PHP !!!!
+INSERT INTO `student` (`std_id`, `std_name`, `std_dept`, `std_gpa`) VALUES ('643020423-0', 'อริญชวุธ กัลยานาม', 'KKU CS IT', '3.2');

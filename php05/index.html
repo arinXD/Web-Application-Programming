@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--    
+    std = {"name":"pop"}
+    std["name"]
+ -->
+<body>
+    <h1>แบบฟอร์มคำนวณเกรดเฉลี่ย</h1>
+    <form name="std" method="post" action="result.php">
+        <p>
+            คำนำหน้า
+            <input type="radio" name="prefix" value="นาย" checked> นาย
+            <input type="radio" name="prefix" value="นางสาว"> นางสาว
+            <input type="radio" name="prefix" value="นาง"> นาง <br>
+            ชื่อ:
+            <input type="text" name="firstName" value="" required> *
+            นามสกุล:
+            <input type="text" name="lastName" value="" required> * <br> 
+
+            <select name="subjet1" required>
+                <option value="" selected hidden> Choose subject
+                <option value="3" > SC362001 Operating Systems
+                <option value="3" > SC362002 Algorithms and Data Structures
+                <option value="3" > SC362003 Introduction to Computer Networking
+                <option value="3" > SC362004 Web Application Programming
+                <option value="3" > SC362005 Database Analysis and Design
+            </select>
+            เกรด
+            <select name="grade1" required>
+                <option value="" selected hidden> Choose grade
+                <option value="4" > A
+                <option value="3.5" > B+
+                <option value="3" > B
+                <option value="2.5" > C+
+                <option value="2" > C
+                <option value="1.5" > D+
+                <option value="1" > D
+                <option value="0" > F
+            </select> * <br>
+            <select name="subjet2" required>
+                <option value="" selected hidden> Choose subject
+                <option value="3" > SC362001 Operating Systems
+                <option value="3" > SC362002 Algorithms and Data Structures
+                <option value="3" > SC362003 Introduction to Computer Networking
+                <option value="3" > SC362004 Web Application Programming
+                <option value="3" > SC362005 Database Analysis and Design
+            </select>
+            เกรด
+            <select name="grade2" required>
+                <option value="" selected hidden> Choose grade
+                <option value="4" > A
+                <option value="3.5" > B+
+                <option value="3" > B
+                <option value="2.5" > C+
+                <option value="2" > C
+                <option value="1.5" > D+
+                <option value="1" > D
+                <option value="0" > F
+            </select> * <br>
+            <select name="subjet3" required>
+                <option value="" selected hidden> Choose subject
+                <option value="3" > SC362001 Operating Systems
+                <option value="3" > SC362002 Algorithms and Data Structures
+                <option value="3" > SC362003 Introduction to Computer Networking
+                <option value="3" > SC362004 Web Application Programming
+                <option value="3" > SC362005 Database Analysis and Design
+            </select>
+            เกรด
+            <select name="grade3" required>
+                <option value="" selected hidden> Choose grade
+                <option value="4" > A
+                <option value="3.5" > B+
+                <option value="3" > B
+                <option value="2.5" > C+
+                <option value="2" > C
+                <option value="1.5" > D+
+                <option value="1" > D
+                <option value="0" > F
+            </select> * <br>
+            * จำเป็นต้องกรอกข้อมูล <br>
+            <button type="submit" >คำนวณเกรดเฉลี่ย</button>
+
+        </p>
+    </form>
+
+</body>
+
+</html>

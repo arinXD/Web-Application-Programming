@@ -7,45 +7,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        let subjects = []
-
+        let subject = [];
+        
         function addSubj() {
-            let subjValue = document.getElementById("subjectName").value;
-            if (subjValue == "") {
+            let subj = document.querySelector("#subjectName").value;
+            if (subj == "") {
                 alert("“กรุณากรอกข้อมูลรายวิชา”");
             } else {
-                console.log(subjects.includes('subjValue'));
-                if(!subjects.includes(subjValue)){
-                    alert("“เพิ่มรายวิชา: " + subjValue + " เรียบร้อยแล้ว”");
-                    subjects.push(subjValue);
-                    console.log(subjects);
-                    subjectName.value = "";
-                }else{
-                    alert("“รายวิชา: " + subjValue + " ถูกใช้แล้ว”");
+                if (subject.includes(subj)) {
+                    alert("รายวิชานี้ถูกเพิ่มแล้ว");
+                } else {
+                    subject.push(subj);
+                    alert("“เพิ่มรายวิชา: " + subj + " เรียบร้อยแล้ว”");
+                    subjectName.value = ""
                 }
             }
         }
         function ShowSubj() {
-            let div = document.querySelector("#showSubject");
-            let select = document.createElement("select");
-            div.appendChild(select);
-            subjects.forEach(element => {
-                let option = document.createElement("option");
-                option.innerHTML = element;
-                select.appendChild(option);
-            });
-        }
+            let count = document.getElementsByTagName("select").length;
+            if (count==0) {
+                let div = document.querySelector("#showSubject");
+                let select = document.createElement("select");
+                div.appendChild(select);
+                subject.forEach(element => {
+                    let option = document.createElement("option");
+                    option.innerHTML = element;
+                    select.appendChild(option);
+                });
+            }else{
+                let Oldselect = document.querySelector("select");
+                Oldselect.remove();
+                let div = document.querySelector("#showSubject");
+                let select = document.createElement("select");
+                div.appendChild(select);
+                subject.forEach(element => {
+                    let option = document.createElement("option");
+                    option.innerHTML = element;
+                    select.appendChild(option);
+                });
+            }
 
-        
+        }
     </script>
 </head>
 
 <body>
-    <h3>แบบฟอร์มเพิ่มรายวิชา</h3>
+    <h1>แบบฟอร์มเพิ่มรายวิชา</h1>
     <input id="subjectName" type="text" value="">
-    <button onclick="addSubj()">เพิ่มรายวิชา</button> <br>
-    <button onclick="ShowSubj()">แสดงรายวิชาทั้งหมด</button>
-
+    <button onclick="addSubj()">เพิ่มรายวิชา</button> <br><br>
+    <button type="submit" onclick="ShowSubj()">แสดงรายวิชา</button>
     <div id="showSubject"></div>
 </body>
 
