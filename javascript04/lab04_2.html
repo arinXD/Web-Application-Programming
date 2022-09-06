@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addSTD() {
+            let stdValue=document.getElementById("std_id").value;
+            if(stdValue==""){
+                alert("“กรุณากรอกข้อมูลรหัสนักศึกษา”");
+            }
+            else{
+                if(!students.includes(stdValue)){
+                    alert("“เพิ่มรหัสนักศึกษา”");
+                    students.push(stdValue);
+                    std_id.value="";
+                }
+                else{
+                    alert("“เช็คชื่อแล้ว”");
+                }
+            }
+            
+        }
+        function ShowSTDCheck() {
+            let div=document.querySelector("#showSTD");
+            let ul=document.createElement("ul");
+            div.appendChild(ul);
+            students.forEach(element => {
+                let li=document.createElement("li");
+                li.innerHTML = element;
+                ul.appendChild(li);
+            });
+        }
+        let students=[];
+    </script>
+</head>
+<body>
+    <h3>แบบฟอร์มเช็คชื่อนักศึกษา</h3>
+    <input id="std_id" type="text" value="">
+    <button onclick="addSTD()">“เพิ่มรหัสนักศึกษา”</button> <br><br>
+    <button onclick="ShowSTDCheck()">“แสดงรหัสนักศึกษาทั้งหมด”</button>
+    <div id="showSTD"></div>
+</body>
+</html>

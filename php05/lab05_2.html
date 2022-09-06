@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="./lab05_2.php" method="post">
+        <fieldset>
+            <legend>ข้อมูลการจองสินค้า</legend>
+            รายละเอียดสินค้า
+            <hr>
+            <input type="radio" name="product" value="iPhone 13 mini" checked>iPhone 13 mini 128GB <br>
+            <input type="radio" name="product" value="iPhone 13">iPhone 13 128GB <br>
+            <input type="radio" name="product" value="iPhone 13 Pro">iPhone 13 Pro 128GB <br>
+            <input type="radio" name="product" value="iPhone 13 Pro Max">iPhone 13 Pro Max 128GB <br>
+            <hr>
+            จำนวนสินค้า <br>
+            <input type="number" name="amount" min="1" value="1">
+
+        </fieldset>
+        <fieldset>
+            <legend>ข้อมูลผู้จองสินค้า</legend>
+            ชื่อ-นามสกุล <br>
+            <input type="text" name="name" value=""> <br>
+            เบอร์โทรศัพท์ติดต่อ <br>
+            <input type="text" name="tel" value=""> <br>
+            Email <br>
+            <input type="text" name="email" value=""> <br>
+        </fieldset> <br>
+        <button type="submit">ยืนยันการจองสินค้า</button>
+    </form>
+</body>
+
+</html>

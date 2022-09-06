@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let subject = []
+
+        function addSubj() {
+            let txt = document.getElementById("key1");
+            if (txt.value == "") {
+                alert("ยังไม่เพิ่มรายวิชา")
+            }
+            else {
+                subject.push(txt.value)
+                console.log(subject)
+                alert("เพิ่มรายวิชา: " + txt.value + " " + "เรียบร้อยแล้ว")
+                key1.value = ""
+            }
+        }
+
+        function ShowSubj() {
+            let div1 = document.getElementById("div1")
+            let select = document.createElement("select")
+            div1.appendChild(select)
+            for (i = 0; i < subject.length; i++) {
+                let option = document.createElement("option")
+                console.log(subject[i]);
+                option.interHTML = '"'+subject[i]+'"';
+                select.appendChild(option)
+            }
+            // subject.forEach(element => {
+            //     let option = document.createElement("option");
+            //     console.log(element);
+            //     option.innerHTML = element;
+            //     select.appendChild(option);
+            // });
+            
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <h3>แบบฟอร์มแเพิ่มรายวิชา</h3>
+    <br>
+    <input type="text" id="key1" value="">
+    <!-- <input type="button" onclick="addSubj()" value="เพิ่มรายวิชา"> <br>
+        <input type="button" onclick="ShowSubj()" value="แสดงรายวิชาทั้งหมด"> -->
+    <button onclick="addSubj()">เพิ่มรายวิชา</button> <br>
+    <button onclick="ShowSubj()">แสดงรายวิชาทั้งหมด</button>
+
+    <div id="div1"></div>
+</body>
+
+
+</html>

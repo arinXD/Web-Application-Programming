@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab05_1</title>
+</head>
+<body>
+    <h1>แบบฟอร์มคำนวณเกรดเฉลี่ย</h1>
+    <form action="./lab05_1.php" method="post">
+        คำนำหน้า:
+        <select name="prefix" required>
+            <option value="นาย">นาย</option>
+            <option value="นางสาว">นางสาว</option>
+            <option value="นาง">นาง</option>
+        </select> <br>
+        ชื่อ: <input type="text" name="fName" value="" required>
+        นามสกุล: <input type="text" name="lName" value="" required> *
+        <select name="subj1" required>
+            <option value="" hidden>Choose subject</option>
+            <option value="SC362001 Operating Systems">SC362001 Operating Systems</option>
+            <option value="SC362002 Algorithms and Data Structures">SC362002 Algorithms and Data Structures</option>
+            <option value="SC362003 Introduction to Computer Networking">SC362003 Introduction to Computer Networking</option>
+            <option value="SC362004 Web Application Programming">SC362004 Web Application Programming</option>
+            <option value="SC362005 Database Analysis and Design">SC362005 Database Analysis and Design</option>
+        </select>
+        <select name="grade1" required>
+            <option value="" hidden>Choose grade</option>
+            <option value="4">A</option>
+            <option value="3.5">B+</option>
+            <option value="3">B</option>
+            <option value="2.5">C+</option>
+            <option value="2">C</option>
+            <option value="1.5">D+</option>
+            <option value="1">D</option>
+            <option value="0">F</option>
+        </select> *
+        <select name="subj2" required>
+            <option value="" hidden>Choose subject</option>
+            <option value="SC362001 Operating Systems">SC362001 Operating Systems</option>
+            <option value="SC362002 Algorithms and Data Structures">SC362002 Algorithms and Data Structures</option>
+            <option value="SC362003 Introduction to Computer Networking">SC362003 Introduction to Computer Networking</option>
+            <option value="SC362004 Web Application Programming">SC362004 Web Application Programming</option>
+            <option value="SC362005 Database Analysis and Design">SC362005 Database Analysis and Design</option>
+        </select>
+        <select name="grade2" required>
+            <option value="" hidden>Choose grade</option>
+            <option value="4">A</option>
+            <option value="3.5">B+</option>
+            <option value="3">B</option>
+            <option value="2.5">C+</option>
+            <option value="2">C</option>
+            <option value="1.5">D+</option>
+            <option value="1">D</option>
+            <option value="0">F</option>
+        </select> *
+        <select name="subj3" required>
+            <option value="" hidden>Choose subject</option>
+            <option value="SC362001 Operating Systems">SC362001 Operating Systems</option>
+            <option value="SC362002 Algorithms and Data Structures">SC362002 Algorithms and Data Structures</option>
+            <option value="SC362003 Introduction to Computer Networking">SC362003 Introduction to Computer Networking</option>
+            <option value="SC362004 Web Application Programming">SC362004 Web Application Programming</option>
+            <option value="SC362005 Database Analysis and Design">SC362005 Database Analysis and Design</option>
+        </select>
+        <select name="grade3" required>
+            <option value="" hidden>Choose grade</option>
+            <option value="4">A</option>
+            <option value="3.5">B+</option>
+            <option value="3">B</option>
+            <option value="2.5">C+</option>
+            <option value="2">C</option>
+            <option value="1.5">D+</option>
+            <option value="1">D</option>
+            <option value="0">F</option>
+        </select> * <br>
+        *จำเป็นต้องกรอกข้อมูล <br>
+        <button type="submit">คำนวณเกรดเฉลี่ย</button>
+    </form>
+</body>
+</html>

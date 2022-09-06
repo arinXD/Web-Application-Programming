@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let subjects = []
+
+        function addSubj() {
+            let subjValue = document.getElementById("subjectName").value;
+            if (subjValue == "") {
+                alert("“กรุณากรอกข้อมูลรายวิชา”");
+            } else {
+                console.log(subjects.includes('subjValue'));
+                if(!subjects.includes(subjValue)){
+                    alert("“เพิ่มรายวิชา: " + subjValue + " เรียบร้อยแล้ว”");
+                    subjects.push(subjValue);
+                    console.log(subjects);
+                    subjectName.value = "";
+                }else{
+                    alert("“รายวิชา: " + subjValue + " ถูกใช้แล้ว”");
+                }
+            }
+        }
+        function ShowSubj() {
+            let div = document.querySelector("#showSubject");
+            let select = document.createElement("select");
+            div.appendChild(select);
+            subjects.forEach(element => {
+                let option = document.createElement("option");
+                option.innerHTML = element;
+                select.appendChild(option);
+            });
+        }
+
+        
+    </script>
+</head>
+
+<body>
+    <h3>แบบฟอร์มเพิ่มรายวิชา</h3>
+    <input id="subjectName" type="text" value="">
+    <button onclick="addSubj()">เพิ่มรายวิชา</button> <br>
+    <button onclick="ShowSubj()">แสดงรายวิชาทั้งหมด</button>
+
+    <div id="showSubject"></div>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="./lab05_3.php" method="post">
+        <h1>แบบฟอร์มกรอกข้อมูลนักศึกษา</h1>
+        <hr>
+        คำนำหน้า:
+        <input type="radio" name="prefix" value="นาย" checked>นาย
+        <input type="radio" name="prefix" value="นางสาว">นางสาว
+        <input type="radio" name="prefix" value="นาง">นาง <br>
+        ชื่อ-นามสกุล:
+        <input type="text" name="name" value="" required> * <br>
+        รหัสนักศึกษา:
+        <input type="text" name="stdID" value="" required> * <br>
+        แทร็ก:
+        <input type="radio" name="branch" value="BIT" checked>BIT
+        <input type="radio" name="branch" value="Network">Network 
+        <input type="radio" name="branch" value="Web">Web <br>
+        Birthday:
+        <input type="date" name="bday" required> * <br>
+        
+        *จำเป็นต้องกรอกข้อมูล <br>
+        <button type="submit">ยืนยันข้อมูล</button>
+    </form>
+    </body>
+</html>

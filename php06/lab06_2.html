@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>แบบฟอร์มบักทึกข้อมูลสุขภาพนักศึกษา</h1>
+    <form action="./lab06_2.php" method="post">
+        <fieldset>
+            <legend>สุขภาพนักศึกษา</legend>
+            รหัสนักศึกษา:
+            <input type="text" name="stdID" value="" required> <br>
+            คำนำหน้า:
+            <select name="prefix" required>
+                <option value="นาย" selected>นาย</option>
+                <option value="นางสาว">นางสาว</option>
+            </select>
+            ชื่อ:
+            <input type="text" name="fname" value="" required>
+            นามสกุล:
+            <input type="text" name="lname" value="" required> <br>
+            ส่วนสูง:
+            <input type="text" name="height" value="" required>
+            น้ำหนัก:
+            <input type="text" name="weight" value="" required> <br> <br>
+            <button type="submit">บันทึกข้อมูลนักศึกษา</button>
+        </fieldset>
+    </form>
+</body>
+</html>

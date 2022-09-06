@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addFood() {
+            let foodValue=document.getElementById('food_name').value;
+            if(foodValue==""){
+                alert("“กรุณากรอกอาหารโปรด”");
+            }else{
+                if(!foods.includes(foodValue)){
+                    alert("“เพิ่มอาหารโปรดสําเร็จ”");
+                    foods.push(foodValue);
+                    food_name.value="";
+                }
+                else{
+                    alert("“อาหารโปรดนี้ถูกเพิ่มแล้ว”");
+                }
+            }
+        }
+        function ShowFood() {
+            let ul=document.querySelector("#food");
+            let liLength=ul.getElementsByTagName('li').length;
+            if(liLength==0){
+                foods.forEach(element => {
+                let li=document.createElement("li");
+                li.innerHTML = element;
+                ul.appendChild(li);
+            });
+            }
+            else{
+                let body=document.querySelector("body");
+                let ulOld=document.querySelector("#food");
+                ulOld.remove();
+                let ul=document.createElement("ul");
+                ul.setAttribute("id","food")
+                body.appendChild(ul);
+                foods.forEach(element => {
+                let li=document.createElement("li");
+                li.innerHTML = element;
+                ul.appendChild(li);
+            });
+            }
+            
+        }
+        
+        let foods=[];
+    </script>
+</head>
+
+<body>
+    <h3>แบบฟอร์มเพิ่มอาหารโปรด</h3>
+    <input id="food_name" type="text" value="">
+    <button onclick="addFood()">“เพิ่มรายการอาหาร”</button> <br><br>
+    <button onclick="ShowFood()">“แสดงรายการอาหารโปรดทั้งหมด”</button>
+    <ul id="food"></ul>
+</body>
+
+</html>
